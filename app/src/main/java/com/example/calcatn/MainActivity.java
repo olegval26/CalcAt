@@ -1,17 +1,12 @@
 package com.example.calcatn;
 
 import androidx.appcompat.app.AppCompatActivity;
-
 import java.util.List;
 import java.util.ArrayList;
-
-
-
 import Data.DatabaseHandler;
 import Model.Resistor;
 import android.content.res.Configuration;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
@@ -248,10 +243,6 @@ public class MainActivity extends AppCompatActivity {
         }
 
 
-
-
-
-
         int orientation = getResources().getConfiguration().orientation;
         if (orientation == Configuration.ORIENTATION_LANDSCAPE) {
             spAtnTypes = findViewById(R.id.spAtnTypes);
@@ -280,7 +271,7 @@ public class MainActivity extends AppCompatActivity {
                     z2 = Integer.parseInt(z_2);
                     a = Integer.parseInt(a_);
 
-
+                    
                     if (attType.equals("None")) {
                         textView11.setText("unknown");
                     } else {
@@ -453,7 +444,7 @@ public class MainActivity extends AppCompatActivity {
                                 textView8.setText("");
                             }
 
-
+                        
                         if (attType.equals("U_type_z1")) {
                             k = Math.pow(10.0, a / 20.0);
                             r1 = z1 * (k - 1) / k;
@@ -625,7 +616,7 @@ public class MainActivity extends AppCompatActivity {
                             textView9.setText("");
                             textView8.setText("");
                             }
-
+                        
                         if (attType.equals("H_type")) {
                                 k = Math.pow(10.0, a / 20.0);
                                 x = Math.sqrt(z1 * z2);
